@@ -32,7 +32,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       // As mentioned above you could also query something else like frontmatter.title above and use a helper function
       // like slugify to create a slug
-      path: `blogs/${node.frontmatter.date}`,
+      path: `/${node.frontmatter.date}`,
       // Provide the path to the MDX content file so webpack can pick it up and transform it into JSX
       component: `${postTemplate}?__contentFilePath=path/${node.frontmatter.date}`,
       // You can use the values in this context in
